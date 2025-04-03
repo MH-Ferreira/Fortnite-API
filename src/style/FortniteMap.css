@@ -1,0 +1,195 @@
+/* Reseta alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Contêiner principal */
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeIn 1.5s forwards, scaleIn 0.8s ease-out;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    animation: slideFromLeft 1s ease-out, bounce 1s ease-out;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideFromLeft 1.2s ease-out, bounce 1.2s ease-out;
+  }
+  
+  /* Imagem do mapa */
+  .map-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-out, scaleIn 1s ease-out;
+  }
+  
+  .map-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards, scaleIn 1s ease-out forwards;
+  }
+  
+  /* Estilizando a lista de pontos de interesse */
+  .pois ul {
+    list-style-type: none;
+  }
+  
+  .pois li {
+    background-color: #3a3a3a;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeInUp 1.8s ease-out forwards, bounce 1s ease-out forwards;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Efeito de destaque para o ponto de interesse ao passar o mouse */
+  .pois li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  .pois p {
+    margin: 5px 0;
+  }
+  
+  .pois strong {
+    color: #ffcc00;
+  }
+  
+  /* Estilo do estado de carregamento e erro */
+  .loading, .error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards, scaleIn 0.8s ease-out forwards;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .map-container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .map-image img {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .map-container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    .map-image img {
+      width: 100%;
+    }
+  }
+  
+  /* Animações */
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animação de "bounce" para saltar */
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Animação de "scaleIn" para aumentar o tamanho */
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  
