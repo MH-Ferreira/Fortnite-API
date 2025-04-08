@@ -22,11 +22,14 @@ Consome a api de um site de Fortnite e mostra as informações consumidas
 ## 📂 Estrutura
 ```
 src/
-├── components/
-├── pages/
 ├── services/
-├── styles/
+├── FortniteMap.js
+├── style/
+├── App.css
+├── FortniteMap.css
 ├── App.js
+├── App.test.js
+├── index.css
 └── index.js
 ```
 
