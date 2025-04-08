@@ -39,4 +39,4 @@ src/
 
 
 Desenvolvido por [MH-Ferreira]  
-[![GitHub](https://github.com/MH-Ferreira)
+
